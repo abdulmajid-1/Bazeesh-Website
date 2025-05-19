@@ -281,29 +281,37 @@ const currentTheme = localStorage.getItem('theme') ||
 // Apply the saved theme
 if (currentTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    themeToggle.checked = true;
+    if (themeToggle) {
+        themeToggle.checked = true;
+    }
 }
 
 // Theme toggle event listener
-themeToggle.addEventListener('change', function() {
-    if (this.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-});
+if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
 
 // Listen for system theme changes
 prefersDarkScheme.addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
         if (e.matches) {
             document.documentElement.setAttribute('data-theme', 'dark');
-            themeToggle.checked = true;
+            if (themeToggle) {
+                themeToggle.checked = true;
+            }
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
-            themeToggle.checked = false;
+            if (themeToggle) {
+                themeToggle.checked = false;
+            }
         }
     }
 }); 
