@@ -1,4 +1,18 @@
-# System files
+# Ignore images folder
+/images/
+
+# Ignore generate-images folder
+/generate-images/
+
+# Ignore all image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.webp
+
+# Ignore system files
 .DS_Store
 Thumbs.db
 
