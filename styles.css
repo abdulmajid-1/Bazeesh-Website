@@ -533,16 +533,84 @@ body {
 }
 
 @media (max-width: 768px) {
+    .contact {
+        padding: 3rem 0;
+    }
+
     .contact-content {
         grid-template-columns: 1fr;
-        padding: 2rem;
+        padding: 1.5rem;
+        gap: 2rem;
     }
 
     .contact-info {
         padding-right: 0;
         border-right: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid var(--border-color);
         padding-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-item {
+        padding: 0.5rem 0;
+    }
+
+    .contact-item i {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .phone-numbers {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-content {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-item i {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .submit-button {
+        width: 100%;
     }
 }
 
@@ -720,7 +788,7 @@ input:checked ~ .theme-label .fa-moon {
 /* Owners Section */
 .owners-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--light-color) 0%, var(--light-color) 100%);
+    background: var(--bg-color);
     transition: background 0.3s ease;
 }
 
@@ -831,11 +899,11 @@ input:checked ~ .theme-label .fa-moon {
 
 /* Dark Mode Styles for Owners Section */
 [data-theme="dark"] .owners-section {
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color) 100%);
+    background: #121212;
 }
 
 [data-theme="dark"] .owner-card {
-    background: var(--card-bg);
+    background: #1e1e1e;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -844,27 +912,27 @@ input:checked ~ .theme-label .fa-moon {
 }
 
 [data-theme="dark"] .owner-info {
-    background: var(--card-bg);
+    background: #1e1e1e;
 }
 
 [data-theme="dark"] .owner-info h3 {
-    color: var(--primary-color);
+    color: #7b4b9e;
 }
 
 [data-theme="dark"] .owner-title {
-    color: var(--secondary-color);
+    color: #6a4b8a;
 }
 
 [data-theme="dark"] .owner-description {
-    color: var(--text-color);
+    color: #f5f5f5;
 }
 
 [data-theme="dark"] .social-link {
-    color: var(--primary-color);
+    color: #7b4b9e;
 }
 
 [data-theme="dark"] .social-link:hover {
-    color: var(--accent-color);
+    color: #8a2be2;
 }
 
 /* Mobile Responsive Styles */
