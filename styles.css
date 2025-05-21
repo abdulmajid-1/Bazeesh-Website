@@ -818,6 +818,30 @@ body {
     .stat-number {
         font-size: 2rem;
     }
+
+    .owners-section {
+        padding: 60px 0;
+    }
+
+    .owners-section h2 {
+        font-size: 2rem;
+    }
+
+    .owners-grid {
+        gap: 30px;
+    }
+
+    .owner-image {
+        height: 400px;
+    }
+
+    .owner-info {
+        padding: 20px;
+    }
+
+    .owner-info h3 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Theme Switch Styles */
@@ -894,7 +918,7 @@ input:checked ~ .theme-label .fa-moon {
 
 /* Owners Section */
 .owners-section {
-    padding: 100px 0;
+    padding: 150px 0 100px;
     background: var(--bg-color);
     transition: background 0.3s ease;
 }
@@ -1006,40 +1030,40 @@ input:checked ~ .theme-label .fa-moon {
 
 /* Dark Mode Styles for Owners Section */
 [data-theme="dark"] .owners-section {
-    background: #121212;
+    background: var(--bg-color);
 }
 
 [data-theme="dark"] .owner-card {
-    background: #1e1e1e;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: var(--card-bg);
+    box-shadow: 0 10px 20px var(--card-shadow);
 }
 
 [data-theme="dark"] .owner-card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 30px var(--card-shadow);
 }
 
 [data-theme="dark"] .owner-info {
-    background: #1e1e1e;
+    background: var(--card-bg);
 }
 
 [data-theme="dark"] .owner-info h3 {
-    color: #7b4b9e;
+    color: var(--primary-color);
 }
 
 [data-theme="dark"] .owner-title {
-    color: #6a4b8a;
+    color: var(--secondary-color);
 }
 
 [data-theme="dark"] .owner-description {
-    color: #f5f5f5;
+    color: var(--text-color);
 }
 
 [data-theme="dark"] .social-link {
-    color: #7b4b9e;
+    color: var(--primary-color);
 }
 
 [data-theme="dark"] .social-link:hover {
-    color: #8a2be2;
+    color: var(--accent-color);
 }
 
 /* Mobile Responsive Styles */
