@@ -7,6 +7,22 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
+// Close menu when clicking outside
+document.addEventListener("click", function(event) {
+  if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -15,11 +31,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     target.scrollIntoView({
       behavior: "smooth",
     });
-    // Close mobile menu if open
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-      hamburger.classList.remove("active");
-    }
   });
 });
 
