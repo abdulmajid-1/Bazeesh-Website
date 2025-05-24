@@ -820,7 +820,7 @@ body {
     }
 
     .owners-section {
-        padding: 60px 0;
+        padding: 120px 0 60px;
     }
 
     .owners-section h2 {
@@ -918,7 +918,7 @@ input:checked ~ .theme-label .fa-moon {
 
 /* Owners Section */
 .owners-section {
-    padding: 150px 0 100px;
+    padding: 200px 0 100px;
     background: var(--bg-color);
     transition: background 0.3s ease;
 }
@@ -1069,7 +1069,7 @@ input:checked ~ .theme-label .fa-moon {
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .owners-section {
-        padding: 60px 0;
+        padding: 120px 0 60px;
     }
 
     .owners-section h2 {
